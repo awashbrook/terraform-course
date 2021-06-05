@@ -1,3 +1,6 @@
+variable "WORKSTATION_CIDR_BLOCK" {
+}
+
 variable "AWS_ACCESS_KEY" {
 }
 
