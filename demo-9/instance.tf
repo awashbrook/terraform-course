@@ -10,6 +10,13 @@ resource "aws_instance" "example" {
 
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
+
+  # extend capacity of root volume
+  root_block_device {
+    volume_size = 16 # double
+    volume_type = "gp2"
+    delete_on_termination = true
+  }
 }
 
 resource "aws_ebs_volume" "ebs-volume-1" {
