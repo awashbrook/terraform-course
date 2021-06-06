@@ -27,3 +27,6 @@ resource "aws_volume_attachment" "ebs-volume-1-attachment" {
   instance_id = aws_instance.example.id
 }
 
+output "ip" {
+ value = aws_instance.example.public_ip
+}
