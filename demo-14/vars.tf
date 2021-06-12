@@ -1,21 +1,33 @@
+variable "WORKSTATION_CIDR_BLOCK" {
+}
+
+variable "AWS_ACCESS_KEY" {
+}
+
+variable "AWS_SECRET_KEY" {
+}
+
 variable "AWS_REGION" {
   default = "eu-west-1"
-}
-
-variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
-}
-
-variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
 }
 
 variable "AMIS" {
   type = map(string)
   default = {
-    us-east-1 = "ami-13be557e"
-    us-west-2 = "ami-06b94666"
-    eu-west-1 = "ami-844e0bf7"
+    us-east-1 = "ami-0ee02acd56a52998e"
+    us-west-2 = "ami-0dd273d94ed0540c0"
+    eu-west-1 = "ami-038d7b856fe7557b3"
   }
 }
 
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "~/.ssh/mykey"
+}
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "~/.ssh/mykey.pub"
+}
+
+variable "INSTANCE_USERNAME" {
+  default = "ubuntu"
+}
