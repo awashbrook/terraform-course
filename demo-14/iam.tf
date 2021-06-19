@@ -36,8 +36,8 @@ resource "aws_iam_role_policy" "s3-mybucket-role-policy" {
               "s3:*"
             ],
             "Resource": [
-              "arn:aws:s3:::mybucket-c29df1",
-              "arn:aws:s3:::mybucket-c29df1/*"
+              "arn:aws:s3:::mybucket-c29df1-sfa0867s0af80ds9f8d7d",
+              "arn:aws:s3:::mybucket-c29df1-sfa0867s0af80ds9f8d7d/*"
             ]
         }
     ]
