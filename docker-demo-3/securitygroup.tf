@@ -19,7 +19,7 @@ resource "aws_security_group" "ecs-securitygroup" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.WORKSTATION_CIDR_BLOCK]
   }
   tags = {
     Name = "ecs"
@@ -41,7 +41,7 @@ resource "aws_security_group" "myapp-elb-securitygroup" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.WORKSTATION_CIDR_BLOCK]
   }
   tags = {
     Name = "myapp-elb"
@@ -64,13 +64,13 @@ resource "aws_security_group" "jenkins-securitygroup" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.WORKSTATION_CIDR_BLOCK]
   }
   ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.WORKSTATION_CIDR_BLOCK]
   }
   tags = {
     Name = "jenkins-securitygroup"

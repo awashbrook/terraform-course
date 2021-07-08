@@ -1,36 +1,44 @@
+variable "WORKSTATION_CIDR_BLOCK" {
+}
+
+variable "AWS_ACCESS_KEY" {
+}
+
+variable "AWS_SECRET_KEY" {
+}
+
 variable "AWS_REGION" {
   default = "eu-west-1"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
+  default = "~/.ssh/mykey"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "~/.ssh/mykey.pub"
 }
+
 
 variable "ECS_INSTANCE_TYPE" {
   default = "t2.micro"
 }
 
+# Full List: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html
 variable "ECS_AMIS" {
   type = map(string)
   default = {
-    us-east-1 = "ami-1924770e"
-    us-west-2 = "ami-56ed4936"
-    eu-west-1 = "ami-c8337dbb"
+    us-east-1 = "ami-05c75efdc7843b54e"
+    us-west-2 = "ami-064803387adcb64b3"
+    eu-west-1 = "ami-071a319a752b45fe7"
   }
 }
-
-# Full List: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html
-
 variable "AMIS" {
   type = map(string)
   default = {
-    us-east-1 = "ami-13be557e"
-    us-west-2 = "ami-06b94666"
-    eu-west-1 = "ami-844e0bf7"
+    us-east-1 = "ami-0ee02acd56a52998e"
+    us-west-2 = "ami-0dd273d94ed0540c0"
+    eu-west-1 = "ami-038d7b856fe7557b3"
   }
 }
 
