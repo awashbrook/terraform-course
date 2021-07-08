@@ -31,7 +31,3 @@ variable "PATH_TO_PRIVATE_KEY" {
 variable "PATH_TO_PUBLIC_KEY" {
   default = "~/.ssh/mykey.pub"
 }
-
-variable "INSTANCE_USERNAME" {
-  default = "ubuntu"
-}
